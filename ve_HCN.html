@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+</body>
+</html>
+<script>
+    class Rectangle {
+        width
+        height
+
+        constructor(width, height) {
+            this.height = height
+            this.width = width
+        }
+
+        getHeight() {
+        return  this.height
+        }
+        getWidth() {
+            return  this.width
+        }
+        getArea() {
+            return this.height*this.width
+        }
+        getC() {
+            return (this.height+this.width)*2
+        }
+        setWidth(width) {
+            this.width = width
+        }
+        setHeight(height) {
+            this.height = height
+        }
+
+    }
+    let HCN = new Rectangle(200,300)
+    let w = HCN.getWidth()
+    let h = HCN.getHeight()
+
+    let dienTich = HCN.getArea()
+
+    let chuVi = HCN.getC();
+    document.write('chieu dai: ' + h + ', chieu rong: ' + w + '. Dien tich: ' + dienTich + '. Chu vi: ' + chuVi)
+    let canvas = document.getElementById('myCanvas');
+    let ctx = canvas.getContext('2d')
+    ctx.fillStyle='red'
+    ctx.fillRect(10,10,w,h)
+
+</script>
