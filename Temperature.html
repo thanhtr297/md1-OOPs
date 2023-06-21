@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Temperature {
+        doC
+        constructor(doC) {
+            this.doC = doC
+
+        }
+        getDoC() {
+            return this.doC
+        }
+
+        getChangeF() {
+            return this.doC*9/5+32
+        }
+        getChangeK() {
+            return this.doC + 273.15
+        }
+    }
+    let doC = new Temperature(32)
+    let c = doC.getDoC()
+    let f = doC.getChangeF()
+    let k = doC.getChangeK()
+    document.write(c + ' oC' + ' = ' + f + ' oF' + ' <br>' +
+    c + ' oC' + ' = ' + k + ' oK')
+</script>
